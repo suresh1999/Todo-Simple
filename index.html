@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>TODOs</title>
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet" />
+        <link rel="icon" href="./img/note-2-24.ico" type="image/ico" sizes="16x16">
+    </head>
+    <body >
+        <!-- Firebase App is always required and must be first -->
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+
+        <!-- Add additional services that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-messaging.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-functions.js"></script>
+        <script src="./js/main.js">
+            
+        </script>
+        
+        <div class="container">
+                <div class="main">
+                    <input type="text" id="itemAdd" style="width:70%" onkeypress="getEvent(event)"/>
+                    <button onclick="addItem()" class="add">Add Task</button>
+                    <button onclick="resetItems()" class="remove">Remove all </button>
+                </div>
+                <div id="tasks">
+            
+                </div>
+        </div>
+        <div class="modal" id='sign'>
+            <button class="sign-in" onclick="signIn()">Google sign in</button>
+        </div>
+        <script>
+            update();
+        </script>
+    </body>
+</html>
